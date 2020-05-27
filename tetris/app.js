@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const tTetromino = [
 		[1, width, width+1, width+2 ],
-		[1, width+1, width+2, width*2+1]
+		[1, width+1, width+2, width*2+1],
 		[width, width+1, width+2, width*2+1],
 		[1, width, width+1, width*2+1],
 	]
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const zTetromino = [
 		[0, width, width+1, width*2+1],
 		[width+1, width+2, width*2, width*2+1],
-		[0,width,width+1,width*2+1],
+		[0, width, width+1, width*2+1],
 		[width+1, width+2, width*2, width*2+1]
 	]
 
@@ -44,8 +44,24 @@ document.addEventListener('DOMContentLoaded', () => {
 		[width, width+1, width+2, width+3]
 	]
 
-	cosnt theTetrominos =[ lTetromino, zTetromino, tTetromino, oTetromino, iTetromino]
+	const theTetrominos = [ lTetromino, zTetromino, tTetromino, oTetromino, iTetromino]
+
+	console.log(theTetrominos);
+
+	let currentPosition = 4
+	let current = theTetrominos[0][0]
+
+	// draw the tetrominos
+
+	function draw() {
+		current.forEach(index => {
+			squares[currentPosition + index].classList.add('tetromino')
+		})
+	}
+
+	draw()
+
+})
 
 	
 
-})
