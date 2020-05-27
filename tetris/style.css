@@ -1,0 +1,18 @@
+body {
+	background-color: lightblue;
+}
+
+.board {
+	width: 200px;
+	height: 400px;
+	background-color: white;
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
+.board div {
+	height: 20px;
+	width: 20px;
+	background-color: red;
+}
